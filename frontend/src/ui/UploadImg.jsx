@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 // import { Button } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
-import Navbar from "./Navbar";
+import Navbar from "./Navbar/Navbar";
 
-const Upload = () => {
+const UploadImg = () => {
     const [images, setImages] = useState([]);
     const [mainImageIndex, setMainImageIndex] = useState(-1);
 
@@ -117,4 +117,4 @@ const Upload = () => {
     );
 };
 
-export default Upload;
+export default UploadImg;
