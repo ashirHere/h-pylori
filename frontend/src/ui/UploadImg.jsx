@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // import { Button } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Navbar from "./Navbar/Navbar";
+import Index from "./Navbar/Index";
 
 const UploadImg = () => {
     const [images, setImages] = useState([]);
@@ -58,6 +59,7 @@ const UploadImg = () => {
     return (
         <div>
             <Navbar />
+            {/* <Index /> */}
             <div className="w-11/12 mx-auto mt-4 bg-[#697eb5] p-4">
                 <div className="">
                     <div className="flex flex-col items-center">

@@ -1,59 +1,69 @@
-// .logo {
-//     width: 23vw;
-//     height: 100%;
-//     margin-top: 1vh;
-// }
+.logo {
+  width: 23vw;
+  height: 100%;
+  margin-top: 1vh;
+}
 
-// .img-container-nav {
-//     display: flex;
-//     justify-content: center;
-//     flex-direction: row;
-//     width: 74px;
-//     height: 74px;
-// }
-
-$n: 2;
-/* number of images*/
 
 .img-container-nav {
-    --d: 10s;
-    /* duration */
-
-    display: grid;
-    overflow: hidden;
-    width: 380px;
-    -webkit-mask: linear-gradient(90deg, #0000, #000 10% 90%, #0000);
+  --d: 6s;
+  /* duration */
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  /* Adjust the number of columns */
+  // gap: 10px;
+  /* Adjust the gap between images */
+  // overflow: hidden;
+  // margin: 0;
+  // place-content: center;
 }
 
 .img-container-nav>img {
-    grid-area: 1/1;
-    width: 100%;
-    aspect-ratio: 1.5;
-    object-fit: cover;
-    animation: r var(--d) linear infinite;
+  grid-area: 1/1;
+  height: 200px;
+  aspect-ratio: 1.5;
+  object-fit: cover;
+  animation: r var(--d) linear infinite;
 }
 
-@for $i from 2 to ($n + 1) {
-    .gallery>img:nth-child(#{$i}) {
-        animation-delay: calc(#{(1 - $i)/$n}*var(--d))
-    }
+.img-container-nav>img:nth-child(2) {
+  animation-delay: calc(1 * var(--d) / -6);
 }
+
+.img-container-nav>img:nth-child(3) {
+  animation-delay: calc(2 * var(--d) / -6);
+}
+
+.img-container-nav>img:nth-child(4) {
+  animation-delay: calc(3 * var(--d) / -6);
+}
+
+.img-container-nav>img:nth-child(5) {
+  animation-delay: calc(4 * var(--d) / -6);
+}
+
+.img-container-nav>img:nth-child(6) {
+  animation-delay: calc(5 * var(--d) / -6);
+}
+
+.img-container-nav>img:nth-child(7) {
+  animation-delay: calc(6 * var(--d) / -6);
+}
+.img-container-nav>img:nth-child(8) {
+  animation-delay: calc(7 * var(--d) / -6);
+}
+.img-container-nav>img:nth-child(9) {
+  animation-delay: calc(8 * var(--d) / -6);
+}
+
 
 @keyframes r {
-    #{100*($n - 1)/$n}% {
-        transform: translate((1 - $n)*100%)
-    }
+  25% {
+    transform: translate(-450%);
+  }
 
-    #{100*($n - 1)/$n + .01}% {
-        transform: translate(100%)
-    }
+  25.01% {
+    transform: translate(300%);
+  }
 }
 
-
-.img-container-nav {
-    margin: 0;
-    min-height: 100vh;
-    display: grid;
-    place-content: center;
-    background: #ECD078;
-}
