@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-// import { Button } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Navbar from "./Navbar/Navbar";
-import Index from "./Navbar/Index";
+import { useNavigate } from 'react-router-dom';
+
 
 const UploadImg = () => {
     const [images, setImages] = useState([]);
     const [mainImageIndex, setMainImageIndex] = useState(-1);
+
+    const navigate = useNavigate();
 
     const handleImageChange = (event) => {
         const selectedFiles = event.target.files;
@@ -115,8 +117,10 @@ const UploadImg = () => {
                     />
                 </div>
             </div>
+            <div><button onClick={() => navigate('/result')}>hello</button></div>
         </div>
     );
 };
+
 
 export default UploadImg;
