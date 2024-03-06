@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
-import Navbar from "./Navbar/Navbar";
+import Navbar from "./Navbar/Slider";
 import { useNavigate } from 'react-router-dom';
 
 
@@ -108,7 +108,8 @@ const UploadImg = () => {
                         </div>
                     </div>
 
-                    {/* File input for uploading images */}
+                     {/* File input for uploading images */}
+                    
                     <input
                         type="file"
                         accept="image/*"

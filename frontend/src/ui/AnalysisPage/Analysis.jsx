@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../Navbar/Navbar';
+import Navbar from '../Navbar/Slider';
 import i1 from '../../imgs/1.jpg'
 import i2 from '../../imgs/2.jpg'
 import i3 from '../../imgs/3.jpg'
