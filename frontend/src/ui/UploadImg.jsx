@@ -118,8 +118,8 @@ const UploadImg = () => {
                     />
                 </div>
             </div>
-            <div><button onClick={() => navigate('/analysis')}>1st page</button></div>
-            <div><button onClick={() => navigate('/result')}>2nd page</button></div>
+            <div><button type="button" className="btn btn-primary" onClick={() => navigate('/analysis')}>Analysis Page</button></div>
+            {/* <div><button onClick={() => navigate('/result')}>2nd page</button></div> */}
         </div>
     );
 };
