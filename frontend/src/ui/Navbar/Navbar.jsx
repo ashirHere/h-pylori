@@ -1,5 +1,6 @@
 import logo from '../../imgs/iqralogo.png'
 import { Link } from 'react-router-dom';
+import './NavStyle.scss'
 
 function Navbar() {
   return (

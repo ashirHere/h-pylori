@@ -1,23 +1,24 @@
 import React from 'react';
-import Navbar from '../Navbar/Slider';
-import i1 from '../../imgs/1.jpg'
-import i2 from '../../imgs/2.jpg'
-import i3 from '../../imgs/3.jpg'
-import i4 from '../../imgs/4.jpg'
+import Navbar from '../Navbar/Navbar';
+import e1 from '../../imgs/endo1.jpg'
+import e2 from '../../imgs/endo2.jpg'
+import e3 from '../../imgs/endo3.jpg'
+import e4 from '../../imgs/endo4.jpg'
 import './Analysis.scss'
 
 const Analysis = () => {
   return (
     <div>
-      <Navbar />
-      <div >
+      <Navbar /> 
+      <div className='seeAllImages'>
         <div className='mainImg'>
-          <img src={i1} alt="Image 1" />
+          <img src={e1} alt="Image 1" />
         </div>
         <div className='sideImages'>
-          <img src={i2} alt="Image 2" />
-          <img src={i3} alt="Image 3" />
-          <img src={i4} alt="Image 4" />
+          <img src={e2} alt="Image 2" />
+          <img src={e3} alt="Image 3" />
+          <img src={e4} alt="Image 4" />
+          <img src={e3} alt="Image 3" />
         </div>
       </div>
     </div>

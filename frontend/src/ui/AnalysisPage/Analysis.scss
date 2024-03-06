@@ -1,13 +1,27 @@
+.seeAllImages{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainImg{
+    height: 100%;
+    padding: 12px 12px 12px 12px;
+    border-style: dashed;
+    img{
+        margin: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover{
+            transform: scale(1.1);
+        }
+}}
+
 .sideImages{
     display: flex;
-    align-items: center;
-    display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: end;
-    margin-top: 20px;
-    margin-right: 7vw;
-    margin-bottom: 20px;
+    border-style: dashed;
     img{
         width: 100px;
         height: 100px;
@@ -18,20 +32,4 @@
             transform: scale(1.1);
         }
     }   
-}
-
-.mainImg{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 7vw;
-    margin-right: 7vw;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    &:hover{
-        transform: scale(1.1);
-    }
 }
