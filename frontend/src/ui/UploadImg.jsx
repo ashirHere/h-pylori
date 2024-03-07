@@ -61,45 +61,41 @@ const UploadImg = () => {
     return (
         <div>
             <Navbar />
-            {/* <Index /> */}
-            <div className="w-11/12 mx-auto mt-4 bg-[#697eb5] p-4">
+            <div className="chooseFileDiv">
                 <div className="">
-                    <div className="flex flex-col items-center">
+                    <div className="">
                         {mainImageIndex !== -1 && (
                             <img
+                                style={{ width: "200px" , height: "100%" }}
                                 src={images[mainImageIndex].url}
                                 alt="Main"
-                                className="w-80  h-40 rounded-lg mb-4"
+                                className=""
                             />
                         )}
 
-                        <div className="flex space-x-4">
+                        <div className=" ">
                             {images.map((image, index) => (
                                 <div key={index} className="relative">
                                     <div
                                         onClick={() => handleSetAsMain(index)}
-                                        className={`w-20 h-20 cursor-pointer ${mainImageIndex === index ? "border-4 border-blue-500" : ""
-                                            }`}
+                                        className=""
+                                            
                                     >
-                                        {/* Image display */}
                                         <img
+                                            style={{ width: "100px" , height: "100px" }}
                                             src={image.url}
                                             alt={`Images ${index + 1}`}
-                                            className="w-full h-full object-cover rounded-md"
+                                            className=""
                                         />
-
-                                        {/* "Set as Main" text */}
                                         {!image.isMain && (
-                                            <div className="absolute bottom-2 left-0 right-0 text-sm text-center">
+                                            <div className="">
                                                 Set as Main
                                             </div>
                                         )}
                                     </div>
-
-                                    {/* Delete button */}
                                     <button
                                         onClick={() => handleDeleteImage(index)}
-                                        className="absolute top-0 right-0 p-1 bg-red-500 text-white rounded-full cursor-pointer"
+                                        className=""
                                     >
                                         X
                                     </button>
@@ -107,17 +103,14 @@ const UploadImg = () => {
                             ))}
                         </div>
                     </div>
-
-                     {/* File input for uploading images */}
-                    
-                    <input
-                        type="file"
-                        accept="image/*"
-                        multiple
-                        onChange={handleImageChange}
-                    />
+                    <input type="file" accept="image/*" multiple onChange={handleImageChange} />
                 </div>
             </div>
+
+
+
+
+
             <div><button type="button" className="btn btn-primary" onClick={() => navigate('/analysis')}>Analysis Page</button></div>
             {/* <div><button onClick={() => navigate('/result')}>2nd page</button></div> */}
         </div>

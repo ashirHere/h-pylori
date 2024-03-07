@@ -32,9 +32,9 @@ const Analysis = () => {
         <p>NEGATIVE: 78%</p>
         <p className='p2'>ACCURACY: 0.82</p>
       </div>
-      <div>
+      <div style={{marginLeft:"-15vw"}}>
         <button type="button" class="btn btn-primary">RE-EVALUATE</button>
-        <button onClick={() => navigate('/result')} type="button" class="btn btn-success">SHOW ANALYSIS</button>
+        <button style={{marginLeft:"2vw" }} onClick={() => navigate('/result')} type="button" class="btn btn-success">SHOW ANALYSIS</button>
       </div>
     </div>
   );
