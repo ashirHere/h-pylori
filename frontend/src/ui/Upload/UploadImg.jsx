@@ -80,9 +80,9 @@ const UploadImg = () => {
                             )}
                         </div>
 
-                        <div className="sideImages">
+                        <div className="">
                             {images.map((image, index) => (
-                                <div key={index} className="relative">
+                                <div key={index} className={image.url ? 'sidePanel' : ''}>
                                     <div
                                         onClick={() => handleSetAsMain(index)}
                                         className=""
@@ -95,16 +95,13 @@ const UploadImg = () => {
                                             className=""
                                         />
                                         {!image.isMain && (
-                                            <div className="">
-                                                
-                                            </div>
+                                            <div className=""></div>
                                         )}
                                     </div>
                                     <button
                                         onClick={() => handleDeleteImage(index)}
                                         className=""
-                                    >
-                                        X
+                                    >X
                                     </button>
                                 </div>
                             ))}
