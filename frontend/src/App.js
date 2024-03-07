@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import UploadImg from './ui/UploadImg';
+import UploadImg from './ui/Upload/UploadImg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Analysis from './ui/AnalysisPage/Analysis';

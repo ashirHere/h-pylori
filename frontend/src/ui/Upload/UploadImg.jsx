@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
-import Navbar from "./Navbar/Slider";
+import Navbar from "../Navbar/Slider";
+import '../AnalysisPage/Analysis.scss';
+import './UploadImg.scss'
 import { useNavigate } from 'react-router-dom';
 
 
@@ -63,33 +65,38 @@ const UploadImg = () => {
             <Navbar />
             <div className="chooseFileDiv">
                 <div className="">
-                    <div className="">
-                        {mainImageIndex !== -1 && (
-                            <img
-                                style={{ width: "200px" , height: "100%" }}
-                                src={images[mainImageIndex].url}
-                                alt="Main"
-                                className=""
-                            />
-                        )}
+                    <div className="imagesTab">
+                        <div className="mImage">
+                            {mainImageIndex !== -1 && (
+                                <img
+                                    style={{
+                                        width: "200px", height: "100%", border: "dashed",
+                                        padding: "3px"
+                                    }}
+                                    src={images[mainImageIndex].url}
+                                    alt="Main"
+                                    className=""
+                                />
+                            )}
+                        </div>
 
-                        <div className=" ">
+                        <div className="sideImages">
                             {images.map((image, index) => (
                                 <div key={index} className="relative">
                                     <div
                                         onClick={() => handleSetAsMain(index)}
                                         className=""
-                                            
+
                                     >
                                         <img
-                                            style={{ width: "100px" , height: "100px" }}
+                                            style={{ width: "100px", height: "100px" }}
                                             src={image.url}
                                             alt={`Images ${index + 1}`}
                                             className=""
                                         />
                                         {!image.isMain && (
                                             <div className="">
-                                                Set as Main
+                                                
                                             </div>
                                         )}
                                     </div>
